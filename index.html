@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="top-section">
+        <div class="top-section-text">
+          <h1>The consequences</h1>
+          <h1>of air pollution</h1>
+          <h1>in the world</h1>
+        </div>
+      </div>
+      <hr />
+      <div class="main">
+        <div class="chart" id="vis1"></div>
+      </div>
+
+      <div class="textContent">
+        <h1>About the Map</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+          blanditiis temporibus ut perspiciatis, reiciendis repudiandae animi
+          ipsam recusandae soluta earum consectetur adipisci quod maxime nemo
+          illum incidunt neque tempora est?
+        </p>
+      </div>
+
+      <hr />
+      <div class="main">
+        <div class="textContent">
+          <h1>About the Chart</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+            blanditiis temporibus ut perspiciatis, reiciendis repudiandae animi
+            ipsam recusandae soluta earum consectetur adipisci quod maxime nemo
+            illum incidunt neque tempora est?
+          </p>
+        </div>
+        <div class="chart" id="vis2"></div>
+      </div>
+      <hr />
+      <div class="main">
+        <h1>TOP 10 most damages</h1>
+      </div>
+    </div>
+
+    <script>
+      // Load the first Vega-Lite specification from the JSON file
+      fetch("./js/vega-lite.vg.json")
+        .then((response) => response.json())
+        .then((spec) => {
+          // Embed the first Vega-Lite specification
+          vegaEmbed("#vis1", spec, { mode: "vega-lite" })
+            .then(console.log)
+            .catch(console.warn);
+        });
+
+      // Load the second Vega-Lite specification from the JSON file
+      fetch("./js/chart.vg.json")
+        .then((response) => response.json())
+        .then((spec) => {
+          // Embed the second Vega-Lite specification
+          vegaEmbed("#vis2", spec, { mode: "vega-lite" })
+            .then(console.log)
+            .catch(console.warn);
+        });
+    </script>
+  </body>
+</html>
