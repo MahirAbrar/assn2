@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "World Map showcasing deaths due Air pollution (total) (IHME, 2019)",
+
   "width": "1200",
   "height": "600",
   "config": {

@@ -14,7 +14,6 @@
         <div class="top-section-text">
           <h1>The consequences</h1>
           <h1>of air pollution</h1>
-          <h1>in the world</h1>
         </div>
       </div>
       <hr />
@@ -23,6 +22,11 @@
       </div>
 
       <div class="textContent">
+        <p class="label">
+          World Map showcasing Air pollutant particles measured in parts per
+          billion (total) (IHME, 2019)
+        </p>
+        <hr />
         <h1>About the Map</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
@@ -47,8 +51,25 @@
       </div>
       <hr />
       <div class="main">
-        <h1>TOP 10 most damages</h1>
+        <div class="textContent">
+          <h1>
+            Top 10 countries with the highest air pollutant particles
+          </h1>
+          <p>
+            measured parts per billion
+          </p>
+        </div>
+
+        <div id="vis3"></div>
+        <div id="vis4"></div>
       </div>
+      <div class="textContent">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae
+        quia esse placeat nesciunt facilis, dolorum repellat earum inventore
+        fuga distinctio, libero quibusdam corporis necessitatibus ab eaque ex
+        minima? Nulla!
+      </div>
+      <hr />
     </div>
 
     <script>
@@ -68,6 +89,24 @@
         .then((spec) => {
           // Embed the second Vega-Lite specification
           vegaEmbed("#vis2", spec, { mode: "vega-lite" })
+            .then(console.log)
+            .catch(console.warn);
+        });
+
+      fetch("js/bar1990.vg.json")
+        .then((response) => response.json())
+        .then((spec) => {
+          // Embed the second Vega-Lite specification
+          vegaEmbed("#vis3", spec, { mode: "vega-lite" })
+            .then(console.log)
+            .catch(console.warn);
+        });
+
+      fetch("./js/bar2016.vg.json")
+        .then((response) => response.json())
+        .then((spec) => {
+          // Embed the second Vega-Lite specification
+          vegaEmbed("#vis4", spec, { mode: "vega-lite" })
             .then(console.log)
             .catch(console.warn);
         });

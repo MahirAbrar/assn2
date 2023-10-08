@@ -9,8 +9,10 @@
   "params": [
     {
       "name": "Continent_selection",
+
       "bind": {
         "input": "select",
+        "size": 40,
         "options": [
           null,
           "North America",
@@ -64,8 +66,14 @@
     "color": {
       "field": "Continent",
       "type": "nominal",
-      "title": "Continent"
+      "title": "Continent",
+      "legend": {
+        "labelFontSize": 20,
+        "titleFontSize": 20,
+        "symbolSize": 200
+      }
     },
+
     "opacity": {
       "condition": { "param": "continent_highlight", "value": 0.6 },
       "value": 0.2
