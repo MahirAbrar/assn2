@@ -1,6 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 10 Countries with Highest Air Pollution Death Rates in 2016",
+  "title": {
+    "text": "Top 10 Countries with Highest Air Pollution Death Rates in 2016",
+    "fontSize": 32,
+    "font": "Arial"
+  },
   "width": "300",
   "height": "300",
   "data": {

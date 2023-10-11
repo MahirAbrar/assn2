@@ -1,6 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Air Pollution Deaths Over Time",
+  "title": {
+    "text": "Air Pollution Deaths Over Time",
+    "fontSize": 32,
+    "font": "Arial"
+  },
   "width": "500",
   "height": "500",
   "data": {
