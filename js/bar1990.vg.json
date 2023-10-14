@@ -8,7 +8,7 @@
   "width": "345",
   "height": "300",
   "data": {
-    "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/top_10_1990.csv"
+    "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/topTen1990.csv"
   },
   "mark": "bar",
   "encoding": {

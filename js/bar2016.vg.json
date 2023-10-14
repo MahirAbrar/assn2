@@ -8,7 +8,7 @@
   "width": "345",
   "height": "300",
   "data": {
-    "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/top_10_2016.csv"
+    "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/topTen2016.csv"
   },
   "mark": "bar",
   "encoding": {
@@ -23,7 +23,7 @@
       }
     },
     "y": {
-      "field": "Air pollution (total) (IHME, 2019)",
+      "field": "Air.pollution..total...IHME..2019.",
       "type": "quantitative",
       "title": "Air Pollution Death Rate in 2016",
       "axis": {

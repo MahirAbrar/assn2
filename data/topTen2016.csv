@@ -1,6 +1,6 @@
-"","Entity","Code","Year","Air.pollution..total...IHME..2019.","continent","sub_region"
-"1","North Korea","PRK",2016,16.51,"Asia","Eastern Asia"
-"2","Nepal","NPL",2016,14.02,"Asia","Southern Asia"
-"3","Bangladesh","BGD",2016,13.8,"Asia","Southern Asia"
-"4","Solomon Islands","SLB",2016,13.52,"Oceania","Melanesia"
-"5","India","IND",2016,12.55,"Asia","Southern Asia"
+,Entity,Code,Year,airPol,continent,sub_region
+1,North Korea,PRK,2016,16.51,Asia,Eastern Asia
+2,Nepal,NPL,2016,14.02,Asia,Southern Asia
+3,Bangladesh,BGD,2016,13.8,Asia,Southern Asia
+4,Solomon Islands,SLB,2016,13.52,Oceania,Melanesia
+5,India,IND,2016,12.55,Asia,Southern Asia
