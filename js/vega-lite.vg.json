@@ -22,19 +22,13 @@
       },
       "transform": [
         {
-          "lookup": "properties.ADMIN",
+          "lookup": "properties.ADM0_A3",
           "from": {
             "data": {
               "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/mapData.csv"
             },
-            "key": "Entity",
-            "fields": [
-              "Air pollution (total) (IHME, 2019)",
-              "Entity",
-              "Year",
-              "Continent",
-              "sub_region"
-            ]
+            "key": "Code",
+            "fields": ["airPol", "Entity", "Year", "Continent", "sub_region"]
           }
         }
       ],
@@ -44,7 +38,7 @@
       },
       "encoding": {
         "color": {
-          "field": "Year",
+          "field": "airPol",
           "type": "quantitative",
           "scale": {
             "scheme": "reds"
@@ -58,11 +52,13 @@
             "title": "Country"
           },
           {
-            "field": "Air pollution (total) (IHME, 2019)",
+            "field": "airPol",
             "type": "quantitative",
-            "title": "Air Pollution"
+            "title": "Air Pollutants in the Air (ppb)"
           },
-          { "field": "Year", "type": "nominal", "title": "Year" }
+          { "field": "Year", "type": "nominal", "title": "Year" },
+          { "field": "Continent", "type": "nominal", "title": "Continent" },
+          { "field": "sub_region", "type": "nominal", "title": "Sub Region" }
         ]
       }
     },
