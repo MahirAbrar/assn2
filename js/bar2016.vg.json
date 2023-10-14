@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Top 10 Countries with Highest Air Pollution Death Rates in 2016",
-    "fontSize": 32,
+    "text": "Highest Air Pollution in 2016",
+    "fontSize": 24,
     "font": "Arial"
   },
-  "width": "300",
+  "width": "345",
   "height": "300",
   "data": {
     "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/top_10_2016.csv"
@@ -16,16 +16,20 @@
       "field": "Entity",
       "type": "nominal",
       "title": "Country",
-      "sort": "-y"
+      "sort": "-y",
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16
+      }
     },
     "y": {
       "field": "Air pollution (total) (IHME, 2019)",
       "type": "quantitative",
-      "title": "Air Pollution Death Rate"
-    },
-    "color": {
-      "field": "Entity",
-      "type": "nominal"
+      "title": "Air Pollution Death Rate in 2016",
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16
+      }
     }
   }
 }

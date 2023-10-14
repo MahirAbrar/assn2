@@ -5,8 +5,8 @@
     "fontSize": 32,
     "font": "Arial"
   },
-  "width": "500",
-  "height": "500",
+  "width": 580,
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/MahirAbrar/week-10-homework/main/data/filtered_share-deaths-air-pollution_with_continent.csv"
   },

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Worldwide Death Rate in 2016 (IHME)",
+    "text": "Worldwide Death by Air in 2016 (IHME)",
     "fontSize": 32,
     "font": "Arial"
   },
@@ -41,9 +41,10 @@
           "field": "Air pollution (total) (IHME, 2019)",
           "type": "quantitative",
           "scale": {
-            "scheme": "reds"
+            "scheme": "reds",
+            "nullValue": "white"
           },
-          "title": "Death Rate"
+          "title": "Air Pollutant Particles"
         },
         "tooltip": [
           {
@@ -84,7 +85,7 @@
       "mark": {
         "type": "geoshape",
         "fill": null,
-        "stroke": "darkgray"
+        "stroke": "darkblue"
       }
     },
     {
@@ -95,15 +96,71 @@
           { "lon": -10, "lat": 50, "conVal": "Europe" },
           { "lon": 20, "lat": 10, "conVal": "Africa" },
           { "lon": 80, "lat": 30, "conVal": "Asia" },
-          { "lon": 150, "lat": -25, "conVal": "Australia" },
-          { "lon": 170, "lat": -45, "conVal": "Oceania" }
+          { "lon": 140, "lat": -25, "conVal": "Australia" },
+          { "lon": 170, "lat": -45, "conVal": "Oceania" },
+          { "lon": -0, "lat": -80, "conVal": "Antarctica" }
         ]
       },
-      "mark": "text",
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "color": "black",
+        "fontStyle": "bold",
+        "style": {
+          "pointerEvents": "none"
+        }
+      },
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },
         "latitude": { "field": "lat", "type": "quantitative" },
         "text": { "field": "conVal", "type": "nominal" }
+      }
+    },
+    {
+      "data": {
+        "values": [{ "lon": 0, "lat": -45, "conVal": "Ocean" }]
+      },
+      "mark": { "type": "text", "fontSize": 32 },
+      "encoding": {
+        "longitude": { "field": "lon", "type": "quantitative" },
+        "latitude": { "field": "lat", "type": "quantitative" },
+        "text": { "field": "conVal", "type": "nominal" }
+      }
+    },
+    {
+      "data": {
+        "values": [{ "label": "Undefined", "color": "gray" }]
+      },
+      "mark": {
+        "type": "square",
+        "size": 200,
+        "fill": "#a79d9a",
+        "stroke": "black"
+      },
+
+      "encoding": {
+        "x": { "value": 30 },
+        "y": { "value": 30 },
+        "color": {
+          "type": "nominal",
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [{ "label": "Data Not Available" }]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "dx": 60,
+        "dy": 0
+      },
+      "encoding": {
+        "x": { "value": 30 },
+        "y": { "value": 30 },
+        "text": { "field": "label", "type": "nominal" }
       }
     }
   ],

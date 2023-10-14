@@ -20,20 +20,36 @@
       <div class="main">
         <div class="chart" id="vis1"></div>
       </div>
+      <p class="label">
+        Figure 1.1: World Map showcasing Air pollutant particles measured in
+        parts per billion (total) (IHME, 2019)
+      </p>
+      <hr />
 
-      <div class="textContent">
-        <p class="label">
-          World Map showcasing Air pollutant particles measured in parts per
-          billion (total) (IHME, 2019)
-        </p>
-        <hr />
-        <h1>About the Map</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
-          blanditiis temporibus ut perspiciatis, reiciendis repudiandae animi
-          ipsam recusandae soluta earum consectetur adipisci quod maxime nemo
-          illum incidunt neque tempora est?
-        </p>
+      <div class="main">
+        <div class="textContent">
+          <h1>About the Map</h1>
+          <p>
+            This world map presents data on air pollution indices as calculated
+            by the Institute for Health Metrics and Evaluation (IHME). IHME has
+            developed its own metrics for assessing air quality, measuring air
+            pollutant particles in parts per billion. Figures 1.1, 1.2, 1.3, and
+            1.4 each provide different perspectives on IHME's air quality index.
+          </p>
+          <p>
+            In summary, a higher index value indicates an increased risk of
+            illness due to water contamination, compromised food supplies, and
+            the spread of diseases.
+          </p>
+        </div>
+
+        <div class="textContent">
+          <h1>How to Read the Map</h1>
+          <p>
+            To find out the specific air pollution levels in various locations,
+            simply hover over the countries on the map that interest you.
+          </p>
+        </div>
       </div>
 
       <hr />
@@ -41,35 +57,105 @@
         <div class="textContent">
           <h1>About the Chart</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
-            blanditiis temporibus ut perspiciatis, reiciendis repudiandae animi
-            ipsam recusandae soluta earum consectetur adipisci quod maxime nemo
-            illum incidunt neque tempora est?
+            The chart shows the trend in Air Pollution deaths accoding to the
+            2019 IHME index for 1990, 2000, 2010 and 2016.
+            <strong
+              >Select a continent from the <i>Continent Selection</i></strong
+            >
+            to understand the trends
+          </p>
+
+          <ul>
+            <strong>Asia:</strong>
+            9.09
+            <strong>Oceania:</strong>
+            8.86
+            <strong>Africa:</strong>
+            7.70
+            <strong>North America:</strong>
+            6.53
+            <strong>South America:</strong>
+            6.13
+            <strong>Europe:</strong>
+            5.98
+          </ul>
+
+          <p>
+            Asia has the highest average share of deaths due to air pollution,
+            followed by Oceania and Africa. Europe has the lowest average death
+            rate (IHME 2019) at 2016 .
+          </p>
+          <h3>What does this mean?</h3>
+          <p>
+            The data suggests that the share of deaths attributable to
+            <strong>air pollution </strong> is
+            <strong>decreasing</strong> globally over time, according to the
+            IHME index. This could imply a number of things:
+          </p>
+          <p>
+            Improved Air Quality, Improved healthcare systems, medical
+            treatments, and overall a Shift in Causes of Death.
           </p>
         </div>
-        <div class="chart" id="vis2"></div>
+        <div>
+          <div class="chart" id="vis2"></div>
+          <p class="label">
+            Figure 1.2: Scatterplot with lines showcasing the trend in the Air
+            pollution index of IHME(2019)
+          </p>
+        </div>
       </div>
       <hr />
       <div class="main">
         <div class="textContent">
           <h1>
-            Top 10 countries with the highest air pollutant particles
+            Analysis of countries with the worst IHME air pollution index
           </h1>
           <p>
             measured parts per billion
           </p>
+          <p>
+            North Korea and Solomon Islands remain top 5 worst in both 1990 and
+            2016
+          </p>
+          <p>
+            North Korea maintained its position as the most polluted country,
+            however, its air pollution level declined from 17.19 to 16.51 in 36
+            years. Similarly, Solomon Islands experienced a decrease in
+            pollution levels and moved up in ranking from 5th to 4th place.
+          </p>
+          <p>
+            On the other hand, new countries emerged in the 2016 data, notably
+            Bangladesh, India, and Nepal. These countries were not present in
+            the 1990 dataset. Conversely, countries like China, Cambodia, and
+            Tajikistan, which were part of the 1990 list, are missing from the
+            2016 data.
+          </p>
+          <p>
+            Overall, while some countries have managed to reduce their air
+            pollution levels, new countries have appeared on the list,
+            indicating shifts in the global landscape of air pollution.
+          </p>
         </div>
-
-        <div id="vis3"></div>
-        <div id="vis4"></div>
+        <div class="chart-container">
+          <div>
+            <div class="chart" id="vis3"></div>
+            <div class="chart" id="vis4"></div>
+          </div>
+          <p class="label">
+            Figure 1.2: Scatterplot with lines showcasing the trend in the Air
+            pollution index of IHME(2019)
+          </p>
+        </div>
       </div>
-      <div class="textContent">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae
-        quia esse placeat nesciunt facilis, dolorum repellat earum inventore
-        fuga distinctio, libero quibusdam corporis necessitatibus ab eaque ex
-        minima? Nulla!
-      </div>
+      <div class="textContent"></div>
       <hr />
+      <div class="main">
+        <div class="textContent">
+          <h1>Comparing continents death factors between 1990 and 2016</h1>
+        </div>
+        <!-- Visualization about death factors in air -->
+      </div>
     </div>
 
     <script>
@@ -78,7 +164,7 @@
         .then((response) => response.json())
         .then((spec) => {
           // Embed the first Vega-Lite specification
-          vegaEmbed("#vis1", spec, { mode: "vega-lite" })
+          vegaEmbed("#vis1", spec, { mode: "vega-lite", actions: false })
             .then(console.log)
             .catch(console.warn);
         });
@@ -88,7 +174,7 @@
         .then((response) => response.json())
         .then((spec) => {
           // Embed the second Vega-Lite specification
-          vegaEmbed("#vis2", spec, { mode: "vega-lite" })
+          vegaEmbed("#vis2", spec, { mode: "vega-lite", actions: false })
             .then(console.log)
             .catch(console.warn);
         });
@@ -97,7 +183,7 @@
         .then((response) => response.json())
         .then((spec) => {
           // Embed the second Vega-Lite specification
-          vegaEmbed("#vis3", spec, { mode: "vega-lite" })
+          vegaEmbed("#vis3", spec, { mode: "vega-lite", actions: false })
             .then(console.log)
             .catch(console.warn);
         });
@@ -106,7 +192,7 @@
         .then((response) => response.json())
         .then((spec) => {
           // Embed the second Vega-Lite specification
-          vegaEmbed("#vis4", spec, { mode: "vega-lite" })
+          vegaEmbed("#vis4", spec, { mode: "vega-lite", actions: false })
             .then(console.log)
             .catch(console.warn);
         });
