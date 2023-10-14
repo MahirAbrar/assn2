@@ -25,10 +25,16 @@
           "lookup": "properties.ADMIN",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/MahirAbrar/week-10-homework/main/data/filtered_share-deaths-air-pollution_with_continent.csv"
+              "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/mapData.csv"
             },
             "key": "Entity",
-            "fields": ["Air pollution (total) (IHME, 2019)", "Entity", "Year"]
+            "fields": [
+              "Air pollution (total) (IHME, 2019)",
+              "Entity",
+              "Year",
+              "Continent",
+              "sub_region"
+            ]
           }
         }
       ],
@@ -38,11 +44,10 @@
       },
       "encoding": {
         "color": {
-          "field": "Air pollution (total) (IHME, 2019)",
+          "field": "Year",
           "type": "quantitative",
           "scale": {
-            "scheme": "reds",
-            "nullValue": "white"
+            "scheme": "reds"
           },
           "title": "Air Pollutant Particles"
         },
