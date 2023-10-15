@@ -23,13 +23,48 @@
       }
     },
     "y": {
-      "field": "Air pollution (total) (IHME, 2019)",
+      "field": "airPol",
       "type": "quantitative",
       "title": "Air Pollution Death Rate in 1990",
       "axis": {
         "labelFontSize": 14,
         "titleFontSize": 16
       }
-    }
+    },
+    "color": {
+      "condition": [
+        {
+          "test": "datum.Entity === 'North Korea' || datum.Entity === 'Solomon Islands'",
+          "value": "orange"
+        },
+        {
+          "test": "datum.Entity === 'Bangladesh' || datum.Entity === 'India' || datum.Entity === 'Nepal'",
+          "value": "#260505"
+        }
+      ],
+      "value": "steelblue"
+    },
+    "tooltip": [
+      {
+        "field": "Entity",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "airPol",
+        "type": "quantitative",
+        "title": "Air Pollutants in the Air (ppb)"
+      },
+      {
+        "field": "continent",
+        "type": "nominal",
+        "title": "Continent"
+      },
+      {
+        "field": "sub_region",
+        "type": "nominal",
+        "title": "Sub Region"
+      }
+    ]
   }
 }

@@ -30,8 +30,9 @@ h3 {
 .main {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  margin: 0 0.5rem, 0.5rem 0.5rem;
+  margin: 2rem
   flex-wrap: wrap;
 }
 
@@ -66,6 +67,10 @@ h1 {
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
+.contentAll {
+  padding: 0 2% 0 2%;
+}
+
 hr {
   height: 0.2rem; /* Makes it thicker */
   width: 50%; /* Makes it cover half the page */
@@ -93,4 +98,9 @@ select,
 .label {
   text-align: center;
   margin-top: 10px;
+}
+
+
+#analysish1 {
+  margin-bottom: 0;
 }

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "columns": 7,
+  "data": {
+    "values": [
+      {
+        "Year": 2016,
+        "sub_region": "Melanesia",
+        "Air Pollution deaths from Household": 144.1361867,
+        "Air Pollution deaths from Ambient Particles": 26.46572442,
+        "Air Pollution deaths through Damaged Ozone": 0.381269856
+      },
+      {
+        "Year": 2016,
+        "sub_region": "Middle Africa",
+        "Air Pollution deaths from Household": 79.36270481,
+        "Air Pollution deaths from Ambient Particles": 40.97582045,
+        "Air Pollution deaths through Damaged Ozone": 3.793454047
+      },
+      {
+        "Year": 2016,
+        "sub_region": "Western Africa",
+        "Air Pollution deaths from Household": 94.81427405,
+        "Air Pollution deaths from Ambient Particles": 23.49367522,
+        "Air Pollution deaths through Damaged Ozone": 2.045471064
+      },
+      {
+        "Year": 2016,
+        "sub_region": "Eastern Africa",
+        "Air Pollution deaths from Household": 84.12898092,
+        "Air Pollution deaths from Ambient Particles": 24.29434026,
+        "Air Pollution deaths through Damaged Ozone": 2.360687307
+      },
+      {
+        "Year": 2016,
+        "sub_region": "Southern Asia",
+        "Air Pollution deaths from Household": 48.55110422,
+        "Air Pollution deaths from Ambient Particles": 43.62253912,
+        "Air Pollution deaths through Damaged Ozone": 8.668361883
+      },
+      {
+        "Year": 2016,
+        "sub_region": "Southern Africa",
+        "Air Pollution deaths from Household": 53.8708195,
+        "Air Pollution deaths from Ambient Particles": 39.21574824,
+        "Air Pollution deaths through Damaged Ozone": 4.924801257
+      },
+      {
+        "Year": 2016,
+        "sub_region": "Micronesia",
+        "Air Pollution deaths from Household": 55.21821815,
+        "Air Pollution deaths from Ambient Particles": 28.57265323,
+        "Air Pollution deaths through Damaged Ozone": 1.439969696
+      }
+    ]
+  },
+  "facet": {
+    "field": "sub_region",
+    "type": "ordinal",
+    "header": {
+      "labelFontSize": 14,
+      "title": "Most Damaging sub regions due to Air Pollution",
+      "titleFontSize": 16
+    }
+  },
+  "spec": {
+    "width": 190,
+    "height": 190,
+    "mark": "arc",
+    "encoding": {
+      "theta": { "field": "value", "type": "quantitative" },
+      "color": { "field": "type", "type": "nominal" },
+      "tooltip": [
+        { "field": "type", "type": "nominal" },
+        { "field": "value", "type": "quantitative" }
+      ]
+    },
+    "transform": [
+      {
+        "fold": [
+          "Air Pollution deaths from Household",
+          "Air Pollution deaths from Ambient Particles",
+          "Air Pollution deaths through Damaged Ozone"
+        ],
+        "as": ["type", "value"]
+      }
+    ]
+  }
+}

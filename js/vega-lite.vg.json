@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Worldwide Death by Air in 2016 (IHME)",
-    "fontSize": 32,
+    "text": "Worldwide Air Pollution in 2016 (IHME)",
+    "fontSize": 40,
     "font": "Arial"
   },
   "width": "1200",
@@ -97,19 +97,15 @@
           { "lon": -10, "lat": 50, "conVal": "Europe" },
           { "lon": 20, "lat": 10, "conVal": "Africa" },
           { "lon": 80, "lat": 30, "conVal": "Asia" },
-          { "lon": 140, "lat": -25, "conVal": "Australia" },
-          { "lon": 170, "lat": -45, "conVal": "Oceania" },
+          { "lon": 160, "lat": -40, "conVal": "Oceania" },
           { "lon": -0, "lat": -80, "conVal": "Antarctica" }
         ]
       },
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 14,
         "color": "black",
-        "fontStyle": "bold",
-        "style": {
-          "pointerEvents": "none"
-        }
+        "fontStyle": "bold"
       },
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },

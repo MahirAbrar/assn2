@@ -6,17 +6,17 @@
     "font": "Arial"
   },
   "width": 580,
-  "height": 600,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/MahirAbrar/week-10-homework/main/data/filtered_share-deaths-air-pollution_with_continent.csv"
   },
   "params": [
     {
       "name": "Continent_selection",
-
+      "value": "North America",
       "bind": {
         "input": "select",
-        "size": 40,
+
         "options": [
           null,
           "North America",
@@ -57,20 +57,38 @@
     "x": {
       "field": "Year",
       "type": "temporal",
-      "title": "Year"
+      "title": "Year",
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16
+      }
     },
     "y": {
       "field": "Air pollution (total) (IHME, 2019)",
       "type": "quantitative",
-      "title": "Air Pollution Death Rate",
+      "title": "Air Pollutants in the Air (ppb)",
       "scale": {
         "domain": [0, 18]
+      },
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16
       }
     },
     "color": {
       "field": "Continent",
       "type": "nominal",
       "title": "Continent",
+      "scale": {
+        "scheme": "set2"
+      },
+      "condition": {
+        "test": {
+          "param": "continent_highlight",
+          "empty": false
+        },
+        "value": "black"
+      },
       "legend": {
         "labelFontSize": 20,
         "titleFontSize": 20,
@@ -79,7 +97,7 @@
     },
 
     "opacity": {
-      "condition": { "param": "continent_highlight", "value": 0.6 },
+      "condition": { "param": "continent_highlight", "value": 1 },
       "value": 0.2
     },
     "detail": {
