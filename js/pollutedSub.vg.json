@@ -72,10 +72,20 @@
       "color": { "field": "type", "type": "nominal" },
       "tooltip": [
         { "field": "type", "type": "nominal" },
-        { "field": "value", "type": "quantitative" }
+        { "field": "value", "type": "quantitative" },
+        {
+          "field": "percentage",
+          "type": "quantitative",
+          "title": "Percentage",
+          "format": ".2f"
+        }
       ]
     },
     "transform": [
+      {
+        "calculate": "datum['Air Pollution deaths from Household'] + datum['Air Pollution deaths from Ambient Particles'] + datum['Air Pollution deaths through Damaged Ozone']",
+        "as": "total"
+      },
       {
         "fold": [
           "Air Pollution deaths from Household",
@@ -83,6 +93,11 @@
           "Air Pollution deaths through Damaged Ozone"
         ],
         "as": ["type", "value"]
+      },
+
+      {
+        "calculate": "(datum.value / datum.total) * 100",
+        "as": "percentage"
       }
     ]
   }
