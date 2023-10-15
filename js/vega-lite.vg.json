@@ -5,8 +5,8 @@
     "fontSize": 40,
     "font": "Arial"
   },
-  "width": "1200",
-  "height": "600",
+  "width": 1200,
+  "height": 600,
   "config": {
     "background": "#a79d9a"
   },

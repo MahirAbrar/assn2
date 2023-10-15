@@ -32,7 +32,7 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 2rem
+  margin: 2rem;
   flex-wrap: wrap;
 }
 
@@ -99,7 +99,6 @@ select,
   text-align: center;
   margin-top: 10px;
 }
-
 
 #analysish1 {
   margin-bottom: 0;

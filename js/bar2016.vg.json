@@ -5,8 +5,8 @@
     "fontSize": 24,
     "font": "Arial"
   },
-  "width": "345",
-  "height": "300",
+  "width": 345,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/topTen2016.csv"
   },
