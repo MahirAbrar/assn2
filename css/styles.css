@@ -23,25 +23,38 @@
   font-size: 4rem;
   color: white;
 }
+.pContent {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
 
+.pContent > strong {
+  font-size: 1.7rem;
+}
 h3 {
   font-size: 2rem;
+}
+
+.pContent > i {
+  font-size: 1.7rem;
 }
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 2rem;
+  margin: 2rem 0rem;
   flex-wrap: wrap;
 }
 
+.main > div {
+  flex: 1;
+}
 /* Description */
 .textContent {
   flex: 2; /* 40% */
   text-align: center;
-  padding: 1rem;
-  margin: 0 0.5rem, 0.5rem 0.5rem;
+  padding: 0.5rem;
+  margin: 0 28px;
 }
 
 .label {
@@ -63,7 +76,7 @@ h1 {
 /* Set background color */
 .background {
   background: linear-gradient(to bottom, #9d8b85, white);
-  margin: 0% 5% 0% 5%;
+  margin: 0% 3% 0% 3%;
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 

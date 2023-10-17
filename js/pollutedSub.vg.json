@@ -64,12 +64,13 @@
     }
   },
   "spec": {
-    "width": 190,
-    "height": 190,
+    "width": 170,
+    "height": 170,
     "mark": "arc",
     "encoding": {
       "theta": { "field": "value", "type": "quantitative" },
       "color": { "field": "type", "type": "nominal" },
+
       "tooltip": [
         { "field": "type", "type": "nominal" },
         { "field": "value", "type": "quantitative" },

@@ -1,10 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Worldwide Air Pollution in 2016 (IHME)",
-    "fontSize": 40,
-    "font": "Arial"
-  },
+
   "width": 1200,
   "height": 600,
   "config": {

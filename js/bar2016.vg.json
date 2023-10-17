@@ -6,7 +6,7 @@
     "font": "Arial"
   },
   "width": 345,
-  "height": 300,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/MahirAbrar/assn2/main/data/topTen2016.csv"
   },
